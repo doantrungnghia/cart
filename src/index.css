@@ -11,17 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-nav.navbar{
+
+nav.navbar {
   background-color: #0b1e42;
 }
-.nav-item a{
+
+.nav-item a {
   color: white;
 }
-.cart-icon{
+
+.cart-icon {
   width: 30px;
   height: 30px;
 }
-.cart-count{
+
+.cart-count {
   font-size: 10px;
   color: black;
   background: yellow;
@@ -35,56 +39,70 @@ nav.navbar{
   align-items: center;
   justify-content: center;
 }
-.home{
+
+.home {
   padding-top: 40px;
 }
-.product-item{
+
+.product-item {
   margin: 10px 0;
 }
-.product-item .card{
+
+.product-item .card {
   padding: 10px 0;
+  height: 100%;
 }
-.card-body::before{
-  content:"";
+
+.card-body::before {
+  content: "";
   display: block;
   height: 1px;
   background: #c8c5c5;
-  margin: 10px 0
+  margin: 10px 0;
 }
-.product-title{
+
+.product-title {
   font-weight: bold;
   font-size: 18px;
 }
-.product-price{
-  color: #ab0505
+
+.product-price {
+  color: #ab0505;
 }
-.product-des{
+
+.product-des {
   font-size: 14px;
 }
-button.btn.btn-secondary{
-  background-color:#1baee78c;
+
+button.btn.btn-secondary {
+  background-color: #1baee78c;
   border: none;
   transition: 0.4s;
 }
-button.btn.btn-secondary:hover{
+
+button.btn.btn-secondary:hover {
   background-color: white;
-  color:#1baee78c;
+  color: #1baee78c;
 }
-.cart-item{
+
+.cart-item {
   background: #f2f1f3;
   padding: 10px;
   margin: 10px;
 }
-.select-count{
+
+.select-count {
   border: none;
   width: 61px;
   height: 30px;
 }
-.cart-checkout{
+
+.cart-checkout {
   padding: 20px;
 }
-.cart-remove{
+
+.cart-remove {
   background-color: transparent;
   color: #eb3333;
-  border: none
+  border: none;
 }
