@@ -11,16 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 nav.navbar{
   background-color: #0b1e42;
 }
+
 .nav-item a{
   color: white;
 }
+
 .cart-icon{
   width: 30px;
   height: 30px;
 }
+
 .cart-count{
   font-size: 10px;
   color: black;
@@ -35,15 +39,19 @@ nav.navbar{
   align-items: center;
   justify-content: center;
 }
+
 .home{
   padding-top: 40px;
 }
+
 .product-item{
   margin: 10px 0;
 }
+
 .product-item .card{
   padding: 10px 0;
 }
+
 .card-body::before{
   content:"";
   display: block;
@@ -51,21 +59,26 @@ nav.navbar{
   background: #c8c5c5;
   margin: 10px 0
 }
+
 .product-title{
   font-weight: bold;
   font-size: 18px;
 }
+
 .product-price{
   color: #ab0505
 }
+
 .product-des{
   font-size: 14px;
 }
+
 button.btn.btn-secondary{
   background-color:#1baee78c;
   border: none;
   transition: 0.4s;
 }
+
 button.btn.btn-secondary:hover{
   background-color: white;
   color:#1baee78c;

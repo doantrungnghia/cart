@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { productData } from "./data/index"
 export default class App extends Component {
+
   constructor(props) {
     super(props)
     this.state = ({
@@ -17,14 +18,34 @@ export default class App extends Component {
       cart: []
     })
   }
+
+  getDataAfterAdd = (data) =>{
+    const {cart} = this.state;
+    console.log(cart)
+    const flag = 0;
+    for(let i in cart){
+      if(cart[i].id === data.id){
+        flag = 1;
+        console.log(cart[i]);
+      }
+    }
+    if(!flag){
+    this.setState({
+      cart: cart.concat(data),
+    })
+    }
+  }
+
   componentDidMount() {
     this.setState({
       data: productData
     })
   }
+
   render() {
     const {data,cart} = this.state;
     if(!data) return null;
+    
     return (
       <Router>
         <Navbar dark expand="md">
@@ -39,8 +60,8 @@ export default class App extends Component {
           </Nav>
         </Navbar>
         <Switch>
-          <Route exact path="/" render={()=><Home data={data}/>}></Route>
-          <Route path="/cart" component={Cart}>
+          <Route exact path="/" render={() => <Home pushDataToApp={this.getDataAfterAdd} data={data}/>}></Route>
+          <Route path="/cart" render={()=><Cart cart={cart}/>}>
           </Route>
         </Switch>
       </Router>
