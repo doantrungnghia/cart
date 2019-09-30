@@ -3,7 +3,6 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import {productData} from "../data/index"
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -23,27 +22,13 @@ const Product = ({title,price,description,image})=>{
   )
 }
 export default class Home extends Component {
-  constructor(props){
-    super(props)
-    this.state=({
-      data: null
-    })
-  }
-  componentDidMount(){
-    this.setState({
-      data: productData
-    })
-  }
   render() {
-    const {data} = this.state
-    if(!data) return null;
-    console.log(data)
     return (
-      <div class="home">
+      <div className="home">
         <div className="container">
           <div className="row">
-            {data.map(data=>{
-              return <Product {...data}/>
+            {this.props.data.map(data=>{
+              return <Product key={`product-${data.id}`} {...data}/>
             })}
           </div>
         </div>
