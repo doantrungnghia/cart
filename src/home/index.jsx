@@ -3,10 +3,8 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-const Product = ({title,price,description,image,addToCart})=>{
+import { numberWithCommas} from "../functions/index"
+const Product = ({id,title,price,description,image,addToCart})=>{
   return(
     <div className="col-lg-3 col-md-4 col-sm-6 col-12 product-item">
       <Card>
@@ -15,19 +13,21 @@ const Product = ({title,price,description,image,addToCart})=>{
           <CardTitle className="product-title">{title}</CardTitle>
           <CardSubtitle className="product-price">{numberWithCommas(price)} VND</CardSubtitle>
           <CardText className="product-des">{description}</CardText>
-          <Button onClick={()=> addToCart(title,price,description,image)}>Add To Cart</Button>
+          <Button onClick={()=> addToCart(id,title,price,description,image)}>Add To Cart</Button>
         </CardBody>
       </Card>
     </div>
   )
 }
 export default class Home extends Component {
-  addToCart = (title,price,description,image) => {
+  addToCart = (id, title, price, description, image) => {
     const item = {
+      id: id,
       title: title,
       price: price,
       description: description,
-      image: image
+      image: image,
+      quantity: 1
     }
     this.props.pushDataToApp(item);
   }

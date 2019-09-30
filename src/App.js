@@ -17,8 +17,14 @@ export default class App extends Component {
       cart: []
     })
   }
-  getCart = (data) =>{
-    const {cart} = this.state
+  getDataAfterAdd = (data) =>{
+    const {cart} = this.state;
+    console.log(cart)
+    for(let i in cart){
+      if(cart[i].id === data.id){
+        console.log(cart[i])
+      }
+    }
     this.setState({
       cart: cart.concat(data),
     })
@@ -31,7 +37,6 @@ export default class App extends Component {
   render() {
     const {data,cart} = this.state;
     if(!data) return null;
-    console.log('render')
     return (
       <Router>
         <Navbar dark expand="md">
@@ -46,8 +51,8 @@ export default class App extends Component {
           </Nav>
         </Navbar>
         <Switch>
-          <Route exact path="/" render={()=><Home pushDataToApp={this.getCart} data={data}/>}></Route>
-          <Route path="/cart" component={Cart}>
+          <Route exact path="/" render={() => <Home pushDataToApp={this.getDataAfterAdd} data={data}/>}></Route>
+          <Route path="/cart" render={()=><Cart cart={cart}/>}>
           </Route>
         </Switch>
       </Router>
