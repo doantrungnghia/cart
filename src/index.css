@@ -50,6 +50,7 @@ code {
 
 .product-item .card {
   padding: 10px 0;
+  height: 100%;
 }
 
 .card-body::before {
