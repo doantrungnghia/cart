@@ -16,10 +16,21 @@ export default class App extends Component {
   }
 
   addProductToCart = data => {
-    const { cart } = this.state;
-    this.setState({
-      cart: cart.concat(data)
-    });
+    const { cart, cartAddedId } = this.state;
+    if (cartAddedId.includes(data.id)) {
+      this.setState({
+        cart: cart.map(item => {
+          return item.id === data.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item;
+        })
+      });
+    } else {
+      this.setState({
+        cart: cart.concat(data),
+        cartAddedId: cartAddedId.concat(data.id)
+      });
+    }
   };
 
   componentDidMount() {
@@ -39,7 +50,9 @@ export default class App extends Component {
           <Nav className="ml-auto" navbar>
             <Link to="/cart">
               <NavItem className="position-relative">
-                <span className="cart-count">{cart.length}</span>
+                <span className="cart-count">
+                  {cart.reduce((total, item) => total + item.quantity, 0)}
+                </span>
                 <img
                   src="https://img.icons8.com/dusk/64/000000/add-shopping-cart.png"
                   className="cart-icon"
