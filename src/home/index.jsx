@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {Product} from "../components/Product" 
 
 export default class Home extends Component {
-
   addToCart = (id, title, price, description, image) => {
     const item = {
       id: id,

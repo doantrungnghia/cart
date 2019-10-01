@@ -12,20 +12,20 @@ code {
     monospace;
 }
 
-nav.navbar{
+.navbar {
   background-color: #0b1e42;
 }
 
-.nav-item a{
+.nav-item a {
   color: white;
 }
 
-.cart-icon{
+.cart-icon {
   width: 30px;
   height: 30px;
 }
 
-.cart-count{
+.cart-count {
   font-size: 10px;
   color: black;
   background: yellow;
@@ -40,46 +40,46 @@ nav.navbar{
   justify-content: center;
 }
 
-.home{
+.home {
   padding-top: 40px;
 }
 
-.product-item{
+.product-item {
   margin: 10px 0;
 }
 
-.product-item .card{
+.product-item .card {
   padding: 10px 0;
 }
 
-.card-body::before{
-  content:"";
+.card-body::before {
+  content: "";
   display: block;
   height: 1px;
   background: #c8c5c5;
-  margin: 10px 0
+  margin: 10px 0;
 }
 
-.product-title{
+.product-title {
   font-weight: bold;
   font-size: 18px;
 }
 
-.product-price{
-  color: #ab0505
+.product-price {
+  color: #ab0505;
 }
 
-.product-des{
+.product-des {
   font-size: 14px;
 }
 
-button.btn.btn-secondary{
-  background-color:#1baee78c;
+.btn-secondary {
+  background-color: #1baee78c;
   border: none;
   transition: 0.4s;
 }
 
-button.btn.btn-secondary:hover{
+.btn-secondary:hover {
   background-color: white;
-  color:#1baee78c;
+  color: #1baee78c;
 }

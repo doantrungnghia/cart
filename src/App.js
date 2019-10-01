@@ -9,8 +9,8 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { productData } from "./data/index"
-export default class App extends Component {
 
+export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = ({
@@ -19,20 +19,18 @@ export default class App extends Component {
     })
   }
 
-  getDataAfterAdd = (data) =>{
+  addProductToCart = (data) =>{
     const {cart} = this.state;
-    console.log(cart)
     const flag = 0;
     for(let i in cart){
       if(cart[i].id === data.id){
         flag = 1;
-        console.log(cart[i]);
       }
     }
     if(!flag){
-    this.setState({
-      cart: cart.concat(data),
-    })
+      this.setState({
+        cart: cart.concat(data),
+      })
     }
   }
 
@@ -60,7 +58,7 @@ export default class App extends Component {
           </Nav>
         </Navbar>
         <Switch>
-          <Route exact path="/" render={() => <Home pushDataToApp={this.getDataAfterAdd} data={data}/>}></Route>
+          <Route exact path="/" render={() => <Home pushDataToApp={this.addProductToCart} data={data}/>}></Route>
           <Route path="/cart" render={()=><Cart cart={cart}/>}>
           </Route>
         </Switch>
