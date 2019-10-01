@@ -18,7 +18,6 @@ describe("Home Page", () => {
 
   it("AddToCart function in Product is working", () => {
     const addCartBtn = homePage.find(".btn-add-cart").first();
-
     addCartBtn.simulate("click");
     expect(pushDataToApp).toHaveBeenCalled();
   });
