@@ -19,7 +19,7 @@ describe('Test App', () => {
     it('Redirect correct to Cart Page ', () => {
       let wrapper = mount(
         <MemoryRouter initialEntries={['/cart']}>
-          <Route path='/cart' render={() => <Cart cart={{}} />} />
+          <Route path='/cart' render={() => <Cart cart={[]} />} />
         </MemoryRouter>
       )
       expect(wrapper.find(Cart)).toHaveLength(1)

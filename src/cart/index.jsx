@@ -47,16 +47,18 @@ export default class Cart extends Component {
         <div className='row'>
           <div className='col-8'>
             <div className='container'>
-              {cart.map(data => {
-                return (
-                  <CartItem
-                    {...data}
-                    key={`cart-item-${data.id}`}
-                    removeItem={this.removeItem}
-                    setQuantity={this.setQuantity}
-                  />
-                )
-              })}
+              {cart
+                ? cart.map(data => {
+                    return (
+                      <CartItem
+                        {...data}
+                        key={`cart-item-${data.id}`}
+                        removeItem={this.removeItem}
+                        setQuantity={this.setQuantity}
+                      />
+                    )
+                  })
+                : ''}
             </div>
           </div>
           <div className='col-4'>
@@ -67,12 +69,14 @@ export default class Cart extends Component {
                 </li>
                 <li>
                   <span className='product-price'>
-                    {numberWithCommas(
-                      cart.reduce(
-                        (total, item) => total + item.price * item.quantity,
-                        0
-                      )
-                    )}{' '}
+                    {cart
+                      ? numberWithCommas(
+                          cart.reduce(
+                            (total, item) => total + item.price * item.quantity,
+                            0
+                          )
+                        )
+                      : 0}{' '}
                     VND
                   </span>
                 </li>

@@ -3,7 +3,7 @@ import { numberWithCommas } from '../../functions/index'
 
 const buildOptions = () => {
   var arr = []
-  for (let i = 1; i <= 90; i++) {
+  for (let i = 1; i <= 20; i++) {
     arr.push(
       <option key={i} value={i}>
         {i}
@@ -13,7 +13,7 @@ const buildOptions = () => {
   return arr
 }
 
-const CartItemCount = ({ value, setQuantity, id }) => {
+export const CartItemCount = ({ value, setQuantity, id }) => {
   return (
     <select
       onChange={setQuantity}
