@@ -70,7 +70,7 @@ export default class App extends Component {
               <Home pushDataToApp={this.addProductToCart} data={data} />
             )}
           ></Route>
-          <Route path='/cart' render={() => <Cart cart={cart} />}></Route>
+          <Route exact path='/cart' render={() => <Cart cart={cart} />}></Route>
         </Switch>
       </Router>
     )
