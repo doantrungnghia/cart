@@ -1,18 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-nav.navbar {
+.navbar {
   background-color: #0b1e42;
 }
 
@@ -54,7 +54,7 @@ nav.navbar {
 }
 
 .card-body::before {
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   background: #c8c5c5;
@@ -74,7 +74,7 @@ nav.navbar {
   font-size: 14px;
 }
 
-button.btn.btn-secondary {
+.btn-secondary {
   background-color: #1baee78c;
   border: none;
   transition: 0.4s;
@@ -98,7 +98,11 @@ button.btn.btn-secondary:hover {
 }
 
 .cart-checkout {
-  padding: 20px;
+  padding: 20px 0;
+}
+
+.cart-checkout ul {
+  list-style-type: none;
 }
 
 .cart-remove {

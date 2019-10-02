@@ -13,7 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --config=jest.config.js --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,10 +31,16 @@
       "last 1 safari version"
     ]
   },
+  "jest": {},
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.9.0",
+    "babel-polyfill": "^6.26.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.10.1"
   }
 }
