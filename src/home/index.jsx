@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Product } from "../components/Product";
+import React, { Component } from 'react'
+import { Product } from '../components/Product'
 
 export default class Home extends Component {
   addToCart = (id, title, price, description, image) => {
@@ -10,15 +10,15 @@ export default class Home extends Component {
       description: description,
       image: image,
       quantity: 1
-    };
-    this.props.pushDataToApp(item);
-  };
+    }
+    this.props.pushDataToApp(item)
+  }
 
   render() {
     return (
-      <div className="home">
-        <div className="container">
-          <div className="row">
+      <div className='home'>
+        <div className='container'>
+          <div className='row'>
             {this.props.data.map(data => {
               return (
                 <Product
@@ -26,11 +26,11 @@ export default class Home extends Component {
                   key={`product-${data.id}`}
                   {...data}
                 />
-              );
+              )
             })}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
