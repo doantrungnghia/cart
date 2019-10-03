@@ -33,6 +33,12 @@ export default class App extends Component {
     }
   }
 
+  updateProductToCart = data => {
+    this.setState({
+      cart: data
+    })
+  }
+
   componentDidMount() {
     this.setState({
       data: productData
@@ -67,10 +73,19 @@ export default class App extends Component {
             exact
             path='/'
             render={() => (
-              <Home pushDataToApp={this.addProductToCart} data={data} />
+              <Home addProductToCart={this.addProductToCart} data={data} />
             )}
           ></Route>
-          <Route exact path='/cart' render={() => <Cart cart={cart} />}></Route>
+          <Route
+            exact
+            path='/cart'
+            render={() => (
+              <Cart
+                cart={cart}
+                updateProductToCart={this.updateProductToCart}
+              />
+            )}
+          ></Route>
         </Switch>
       </Router>
     )

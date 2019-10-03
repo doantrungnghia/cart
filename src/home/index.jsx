@@ -11,7 +11,7 @@ export default class Home extends Component {
       image: image,
       quantity: 1
     }
-    this.props.pushDataToApp(item)
+    this.props.addProductToCart(item)
   }
 
   render() {
