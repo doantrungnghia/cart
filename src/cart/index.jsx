@@ -20,24 +20,28 @@ export default class Cart extends Component {
     const { cart } = this.state
     const id = Number(e.target.id)
     const quantity = Number(e.target.value)
-    this.setState({
-      cart: cart.map(item => {
-        return item.id === id ? { ...item, quantity: quantity } : item
-      })
-    })
-    this.props.updateProductToCart(
-      cart.map(item => {
-        return item.id === id ? { ...item, quantity: quantity } : item
-      })
+    this.setState(
+      {
+        cart: cart.map(item => {
+          return item.id === id ? { ...item, quantity: quantity } : item
+        })
+      },
+      () => {
+        this.props.updateProductToCart(this.state.cart)
+      }
     )
   }
 
   removeItem = id => {
     const { cart } = this.state
-    this.setState({
-      cart: cart.filter(item => item.id !== id)
-    })
-    this.props.updateProductToCart(cart.filter(item => item.id !== id))
+    this.setState(
+      {
+        cart: cart.filter(item => item.id !== id)
+      },
+      () => {
+        this.props.updateProductToCart(this.state.cart)
+      }
+    )
   }
 
   render() {
