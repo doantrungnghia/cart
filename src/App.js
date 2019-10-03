@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { productData } from './data/index'
 import BannerSlider from './components/BannerSlider'
 import CartNone from './cart/components/CartNone'
+import ProductDetail from './components/ProductDetail'
+import ModalAdeded from './components/ModalAdded'
 
 export default class App extends Component {
   constructor(props) {
@@ -13,7 +15,8 @@ export default class App extends Component {
     this.state = {
       data: null,
       cart: [],
-      productIds: []
+      productIds: [],
+      modalStatus: false
     }
   }
 
@@ -25,19 +28,22 @@ export default class App extends Component {
           return item.id === data.id
             ? { ...item, quantity: item.quantity + 1 }
             : item
-        })
+        }),
+        modalStatus: true
       })
     } else {
       this.setState({
         cart: cart.concat(data),
-        productIds: productIds.concat(data.id)
+        productIds: productIds.concat(data.id),
+        modalStatus: true
       })
     }
   }
 
   updateProductToCart = data => {
     this.setState({
-      cart: data
+      cart: data,
+      modalStatus: false
     })
   }
 
@@ -48,34 +54,37 @@ export default class App extends Component {
   }
 
   render() {
-    const { data, cart } = this.state
+    const { data, cart, modalStatus } = this.state
     if (!data) return null
 
     return (
       <Router>
+        <ModalAdeded modalStatus={modalStatus} />
         <Navbar dark expand='md'>
-          <Link to='/'>
-            <img
-              className='img-fluid logo'
-              src='https://www.jml.sg/assets/jml_new_logo-4c099e3bf7cb23709b7ef41c81e50e1c.png'
-              alt=''
-            />
-          </Link>
-          <Nav className='ml-auto' navbar>
-            <Link to='/cart'>
-              <NavItem className='position-relative cart-count-wrapper'>
-                <img
-                  src='https://www.jml.sg/assets/shopping-cart-8b67cc0c3394412d73ffb41ebf3100e6.svg'
-                  className='cart-icon'
-                  alt='kvy-tech'
-                />
-                <strong>Cart</strong>
-                <span className='cart-count'>
-                  {cart.reduce((total, item) => total + item.quantity, 0)}
-                </span>
-              </NavItem>
+          <div className='container'>
+            <Link to='/'>
+              <img
+                className='img-fluid logo'
+                src='https://www.jml.sg/assets/jml_new_logo-4c099e3bf7cb23709b7ef41c81e50e1c.png'
+                alt=''
+              />
             </Link>
-          </Nav>
+            <Nav className='ml-auto' navbar>
+              <Link to='/cart'>
+                <NavItem className='position-relative cart-count-wrapper'>
+                  <img
+                    src='https://www.jml.sg/assets/shopping-cart-8b67cc0c3394412d73ffb41ebf3100e6.svg'
+                    className='cart-icon'
+                    alt='kvy-tech'
+                  />
+                  <strong>Cart</strong>
+                  <span className='cart-count'>
+                    {cart.reduce((total, item) => total + item.quantity, 0)}
+                  </span>
+                </NavItem>
+              </Link>
+            </Nav>
+          </div>
         </Navbar>
         <BannerSlider />
         <Switch>
@@ -100,6 +109,19 @@ export default class App extends Component {
               )
             }
           ></Route>
+          {data.map(item => (
+            <Route
+              key={`product-detail-${item.id}`}
+              exact
+              path={'/' + item.id}
+              render={() => (
+                <ProductDetail
+                  addProductToCart={this.addProductToCart}
+                  {...item}
+                />
+              )}
+            ></Route>
+          ))}
         </Switch>
       </Router>
     )

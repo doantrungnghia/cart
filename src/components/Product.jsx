@@ -5,8 +5,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  Button
+  CardSubtitle
 } from 'reactstrap'
 import { numberWithCommas } from '../functions/index'
 import { Link } from 'react-router-dom'
@@ -31,16 +30,16 @@ export const Product = ({
                 {numberWithCommas(price)} VND
               </CardSubtitle>
               <CardText className='product-des'>{description}</CardText>
-              <Button
-                className='btn-add-cart'
-                onClick={() => addToCart(id, title, price, description, image)}
-              >
-                Add To Cart
-              </Button>
             </CardBody>
           </Card>
         </div>
       </Link>
+      <button
+        className='btn-add-cart position-absolute'
+        onClick={() => addToCart(id, title, price, description, image)}
+      >
+        Add To Cart
+      </button>
     </div>
   )
 }

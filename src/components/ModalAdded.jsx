@@ -2,9 +2,31 @@ import React from 'react'
 import { Modal, ModalBody } from 'reactstrap'
 
 export default class ModalAdeded extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      modalStatus: false
+    }
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.modalStatus === true) {
+      this.setState({
+        modalStatus: true
+      })
+    }
+
+    setTimeout(() => {
+      this.setState({
+        modalStatus: false
+      })
+    }, 900)
+  }
+
   render() {
+    const { modalStatus } = this.state
     return (
-      <Modal isOpen={this.props.modalStatus} className={this.props.className}>
+      <Modal isOpen={modalStatus} className={this.props.className}>
         <ModalBody>
           <div className='success-checkmark'>
             <div className='check-icon'>

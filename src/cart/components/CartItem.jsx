@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { numberWithCommas } from '../../functions/index'
 
 export const CartItemCount = ({ value = 0, setQuantity, id }) => {
@@ -37,7 +37,7 @@ export const CartItem = ({
         <CartItemCount id={id} setQuantity={setQuantity} value={quantity} />
         <p className='product-des'>{description}</p>
         <button
-          onClick={() => removeItem(id)}
+          onClick={() => removeItem(id, false)}
           className='cart-remove text-center'
         >
           Remove this item
