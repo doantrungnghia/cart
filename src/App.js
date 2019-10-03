@@ -5,7 +5,6 @@ import { Navbar, Nav, NavItem } from 'reactstrap'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { productData } from './data/index'
 import BannerSlider from './components/BannerSlider'
-import CartNone from './cart/components/CartNone'
 import ProductDetail from './components/ProductDetail'
 import ModalAdeded from './components/ModalAdded'
 
@@ -98,16 +97,12 @@ export default class App extends Component {
           <Route
             exact
             path='/cart'
-            render={() =>
-              cart.length ? (
-                <Cart
-                  cart={cart}
-                  updateProductToCart={this.updateProductToCart}
-                />
-              ) : (
-                <CartNone />
-              )
-            }
+            render={() => (
+              <Cart
+                cart={cart}
+                updateProductToCart={this.updateProductToCart}
+              />
+            )}
           ></Route>
           {data.map(item => (
             <Route
