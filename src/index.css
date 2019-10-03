@@ -80,33 +80,7 @@ code {
   transition: 0.4s;
 }
 
-button.btn.btn-secondary:hover {
+.btn-secondary:hover {
   background-color: white;
   color: #1baee78c;
-}
-
-.cart-item {
-  background: #f2f1f3;
-  padding: 10px;
-  margin: 10px;
-}
-
-.select-count {
-  border: none;
-  width: 61px;
-  height: 30px;
-}
-
-.cart-checkout {
-  padding: 20px 0;
-}
-
-.cart-checkout ul {
-  list-style-type: none;
-}
-
-.cart-remove {
-  background-color: transparent;
-  color: #eb3333;
-  border: none;
 }
