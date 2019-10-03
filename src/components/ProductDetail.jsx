@@ -15,7 +15,6 @@ export default class ProductDetail extends Component {
 
     return (
       <div className='container product-detail-wrapper'>
-        {/* <ModalAdeded modalStatus={true} /> */}
         <div className='product-detail bg-white'>
           <div className='row'>
             <div className='col-sm-5 col-12'>
@@ -26,7 +25,7 @@ export default class ProductDetail extends Component {
             <div className='col-sm-7 col-12 mt-sm-0 mt-4'>
               <div className='product-title'>{title}</div>
               <div className='product-price'>{numberWithCommas(price)} VND</div>
-              <div className='product-des'> {description}</div>
+              <div className='product-des'>{description}</div>
               <div className='product-detail-text mt-3'>{detail}</div>
               <button
                 className='btn-add-cart mt-3'

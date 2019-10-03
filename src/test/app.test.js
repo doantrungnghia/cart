@@ -1,7 +1,6 @@
 import React from 'react'
-import App from '../App'
-import { shallow, mount } from 'enzyme'
-import { Switch, Route, MemoryRouter } from 'react-router-dom'
+import { mount } from 'enzyme'
+import { Route, MemoryRouter } from 'react-router-dom'
 import Home from '../home/index'
 import Cart from '../cart/index'
 
