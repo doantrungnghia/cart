@@ -4,6 +4,8 @@ import Cart from './cart'
 import { Navbar, Nav, NavItem } from 'reactstrap'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { productData } from './data/index'
+import BannerSlider from './components/BannerSlider'
+import CartNone from './cart/components/CartNone'
 
 export default class App extends Component {
   constructor(props) {
@@ -52,22 +54,30 @@ export default class App extends Component {
     return (
       <Router>
         <Navbar dark expand='md'>
-          <Link to='/'>List Product</Link>
+          <Link to='/'>
+            <img
+              className='img-fluid logo'
+              src='https://www.jml.sg/assets/jml_new_logo-4c099e3bf7cb23709b7ef41c81e50e1c.png'
+              alt=''
+            />
+          </Link>
           <Nav className='ml-auto' navbar>
             <Link to='/cart'>
-              <NavItem className='position-relative'>
-                <span className='cart-count'>
-                  {cart.reduce((total, item) => total + item.quantity, 0)}
-                </span>
+              <NavItem className='position-relative cart-count-wrapper'>
                 <img
-                  src='https://img.icons8.com/dusk/64/000000/add-shopping-cart.png'
+                  src='https://www.jml.sg/assets/shopping-cart-8b67cc0c3394412d73ffb41ebf3100e6.svg'
                   className='cart-icon'
                   alt='kvy-tech'
                 />
+                <strong>Cart</strong>
+                <span className='cart-count'>
+                  {cart.reduce((total, item) => total + item.quantity, 0)}
+                </span>
               </NavItem>
             </Link>
           </Nav>
         </Navbar>
+        <BannerSlider />
         <Switch>
           <Route
             exact
@@ -79,12 +89,16 @@ export default class App extends Component {
           <Route
             exact
             path='/cart'
-            render={() => (
-              <Cart
-                cart={cart}
-                updateProductToCart={this.updateProductToCart}
-              />
-            )}
+            render={() =>
+              cart.length ? (
+                <Cart
+                  cart={cart}
+                  updateProductToCart={this.updateProductToCart}
+                />
+              ) : (
+                <CartNone />
+              )
+            }
           ></Route>
         </Switch>
       </Router>

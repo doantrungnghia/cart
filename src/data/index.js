@@ -5,8 +5,7 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/191276/samsung-galaxy-note-10-pink-600x600.jpg',
     price: 12000000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 2,
@@ -14,8 +13,7 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198986/samsung-galaxy-s10-plus-512gb-ceramic-black-600x600.jpg',
     price: 10000000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 3,
@@ -23,8 +21,7 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/201404/vivo-y17-purple-docquyen-600x600.jpg',
     price: 9500000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 4,
@@ -32,8 +29,7 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/208847/vsmart-live-blue-18thangbh-600x600.jpg',
     price: 8200000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 5,
@@ -41,25 +37,22 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198394/xiaomi-mi-9-se-blue-18thangbh-600x600.jpg',
     price: 7000000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 6,
-    title: 'Huawei Y7 Pro 2019',
+    title: 'Huawei Y7 Pro',
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198167/xiaomi-redmi-7-black-1-600x600.jpg',
     price: 19500000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   },
   {
     id: 7,
-    title: 'Huawei Y7 Pro 2019',
+    title: 'Vivo Y91C',
     image:
       'https://cdn.tgdd.vn/Products/Images/42/199083/vivo-y91c-600x600.jpg',
     price: 14400000,
-    description:
-      'Màn hình này có độ sáng khá tốt giúp người tiêu dùng có thể dễ dàng sử dụng ngoài trời.Bên cạnh đó máy còn được tích hợp công nghệ lọc ánh sáng xanh gây hại được phát ra từ màn hình rất đáng khen.'
+    description: 'Tặng thêm 1 năm bảo hành hãng'
   }
 ]

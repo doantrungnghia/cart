@@ -7,9 +7,9 @@ import { numberWithCommas } from '../functions/index'
 
 describe('Home Page', () => {
   const product = shallow(<Product {...productData[0]} />)
-  const pushDataToApp = jest.fn()
+  const addProductToCart = jest.fn()
   const homePage = mount(
-    <Home pushDataToApp={pushDataToApp} data={productData} />
+    <Home addProductToCart={addProductToCart} data={productData} />
   )
 
   it('Render List Products Correctly - length', () => {
@@ -19,7 +19,7 @@ describe('Home Page', () => {
   it('AddToCart function in Product is working', () => {
     const addCartBtn = homePage.find('.btn-add-cart').first()
     addCartBtn.simulate('click')
-    expect(pushDataToApp).toHaveBeenCalled()
+    expect(addProductToCart).toHaveBeenCalled()
   })
 
   describe('Render Product Correctly', () => {
