@@ -101,6 +101,7 @@ export default class App extends Component {
               <Cart
                 cart={cart}
                 updateProductToCart={this.updateProductToCart}
+                addProductToCart={this.addProductToCart}
               />
             )}
           ></Route>

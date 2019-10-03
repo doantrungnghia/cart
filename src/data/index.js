@@ -68,5 +68,35 @@ export const productData = [
     description: 'Tặng thêm 1 năm bảo hành hãng',
     detail:
       'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+  },
+  {
+    id: 8,
+    title: 'Realme C2',
+    image:
+      'https://cdn.tgdd.vn/Products/Images/42/203347/realme-c2-16gb-new-blue-400x400.jpg',
+    price: 14400000,
+    description: 'Tặng thêm 1 năm bảo hành hãng',
+    detail:
+      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+  },
+  {
+    id: 9,
+    title: 'Oppo A9 2020',
+    image:
+      'https://cdn.tgdd.vn/Products/Images/42/202028/oppo-a9-2020-green-1-400x400.jpg',
+    price: 12400000,
+    description: 'Tặng thêm 1 năm bảo hành hãng',
+    detail:
+      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+  },
+  {
+    id: 10,
+    title: 'Samsung Galaxy S10 Plus',
+    image:
+      'https://cdn.tgdd.vn/Products/Images/42/198986/samsung-galaxy-s10-plus-512gb-ceramic-black-400x400.jpg',
+    price: 11400000,
+    description: 'Tặng thêm 1 năm bảo hành hãng',
+    detail:
+      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
   }
 ]

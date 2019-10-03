@@ -36,7 +36,7 @@ export default class ModalAdeded extends React.Component {
               <div className='icon-fix'></div>
             </div>
           </div>
-          <h4>You added succesfully</h4>
+          <h4 className='text-center'>You added succesfully</h4>
         </ModalBody>
       </Modal>
     )

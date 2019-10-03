@@ -16,10 +16,15 @@ export const Product = ({
   price,
   description,
   image,
-  addToCart
+  addProductToCart,
+  className
 }) => {
   return (
-    <div className='col-lg-3 col-md-4 col-sm-6 col-12 product-item-wrapper'>
+    <div
+      className={`${
+        className ? className : `col-lg-3 col-md-4 col-sm-6 col-12`
+      } product-item-wrapper`}
+    >
       <Link to={`/${id}`}>
         <div className='product-item'>
           <Card className='border-0'>
@@ -36,7 +41,16 @@ export const Product = ({
       </Link>
       <button
         className='btn-add-cart position-absolute'
-        onClick={() => addToCart(id, title, price, description, image)}
+        onClick={() =>
+          addProductToCart({
+            id,
+            title,
+            price,
+            description,
+            image,
+            quantity: 1
+          })
+        }
       >
         Add To Cart
       </button>
