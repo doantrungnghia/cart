@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { numberWithCommas } from '../functions/index'
 import { CartItem } from './components/CartItem'
-import CartNone from './components/CartNone'
+import EmptyCart from './components/EmptyCart'
 import ProductSlider from '../components/ProductSlider'
 
 export default class Cart extends Component {
@@ -112,7 +112,7 @@ export default class Cart extends Component {
               </div>
             </div>
           ) : (
-            <CartNone />
+            <EmptyCart />
           )}
         </section>
         <ProductSlider addProductToCart={this.props.addProductToCart} />

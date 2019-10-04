@@ -26,7 +26,7 @@ export default class ModalAdeded extends React.Component {
   render() {
     const { modalStatus } = this.state
     return (
-      <Modal isOpen={modalStatus} className={this.props.className}>
+      <Modal isOpen={modalStatus}>
         <ModalBody>
           <div className='success-checkmark'>
             <div className='check-icon'>
