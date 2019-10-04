@@ -37,7 +37,7 @@ export const CartItem = ({
         <CartItemCount id={id} setQuantity={setQuantity} quantity={quantity} />
         <p className='product-des'>{description}</p>
         <button
-          onClick={() => removeItem(id, false)}
+          onClick={() => removeItem(id)}
           className='cart-remove text-center'
         >
           Remove this item
