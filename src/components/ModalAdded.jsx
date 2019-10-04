@@ -2,9 +2,31 @@ import React from 'react'
 import { Modal, ModalBody } from 'reactstrap'
 
 export default class ModalAdeded extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      modalStatus: false
+    }
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.modalStatus === true) {
+      this.setState({
+        modalStatus: true
+      })
+    }
+
+    setTimeout(() => {
+      this.setState({
+        modalStatus: false
+      })
+    }, 900)
+  }
+
   render() {
+    const { modalStatus } = this.state
     return (
-      <Modal isOpen={this.props.modalStatus} className={this.props.className}>
+      <Modal isOpen={modalStatus}>
         <ModalBody>
           <div className='success-checkmark'>
             <div className='check-icon'>
@@ -14,7 +36,7 @@ export default class ModalAdeded extends React.Component {
               <div className='icon-fix'></div>
             </div>
           </div>
-          <h4>You added succesfully</h4>
+          <h4 className='text-center'>You added succesfully</h4>
         </ModalBody>
       </Modal>
     )

@@ -4,13 +4,16 @@ import { shallow, mount } from 'enzyme'
 import { CartItem, CartItemCount } from '../cart/components/CartItem'
 import Cart from '../cart/index'
 import { numberWithCommas } from '../functions/index'
+import { BrowserRouter, Router } from 'react-router-dom'
 
 describe('Cart Page', () => {
   const removeItemFunction = jest.fn()
   const setQuantityFunction = jest.fn()
   const updateProductToCart = jest.fn()
   const cartPage = mount(
-    <Cart updateProductToCart={updateProductToCart} cart={[]} />
+    <BrowserRouter>
+      <Cart updateProductToCart={updateProductToCart} cart={productData} />
+    </BrowserRouter>
   )
   const cartItem = shallow(
     <CartItem
@@ -35,7 +38,6 @@ describe('Cart Page', () => {
   })
 
   it('Render Correctly Length of CartItem', () => {
-    cartPage.setState({ cart: productData })
     expect(cartPage.find('.cart-item').length).toEqual(productData.length)
   })
 

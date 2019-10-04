@@ -4,12 +4,15 @@ import { productData } from '../data/index'
 import { shallow, mount } from 'enzyme'
 import { Product } from '../components/Product'
 import { numberWithCommas } from '../functions/index'
+import { BrowserRouter } from 'react-router-dom'
 
 describe('Home Page', () => {
   const product = shallow(<Product {...productData[0]} />)
   const addProductToCart = jest.fn()
   const homePage = mount(
-    <Home addProductToCart={addProductToCart} data={productData} />
+    <BrowserRouter>
+      <Home addProductToCart={addProductToCart} data={productData} />
+    </BrowserRouter>
   )
 
   it('Render List Products Correctly - length', () => {
