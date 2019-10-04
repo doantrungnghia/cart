@@ -88,6 +88,31 @@ a:hover {
   padding: 40px;
 }
 
+.heading-title {
+  border-bottom: 1px solid #e9e9e9;
+  padding-bottom: 7px;
+  margin-bottom: 10px;
+}
+
+.heading-title span {
+  background: #00637e;
+  position: relative;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+.heading-title span::after {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 20px;
+  background-color: #054852;
+  right: -24px;
+  bottom: 9px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
 .product-item-wrapper {
   margin: 10px 0;
 }

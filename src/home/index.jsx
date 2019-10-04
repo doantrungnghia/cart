@@ -40,6 +40,9 @@ export default class Home extends Component {
       <div className='home'>
         <ModalAdeded modalStatus={modalStatus} />
         <div className='container'>
+          <div className='heading-title'>
+            <span>PRODUCT</span>
+          </div>
           <div className='row'>
             {this.props.data.map(data => {
               return (
