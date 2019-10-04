@@ -5,9 +5,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/191276/samsung-galaxy-note-10-pink-600x600.jpg',
     price: 12000000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 2,
@@ -15,9 +16,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198986/samsung-galaxy-s10-plus-512gb-ceramic-black-600x600.jpg',
     price: 10000000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 3,
@@ -25,9 +27,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/201404/vivo-y17-purple-docquyen-600x600.jpg',
     price: 9500000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 4,
@@ -35,9 +38,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/208847/vsmart-live-blue-18thangbh-600x600.jpg',
     price: 8200000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 5,
@@ -45,9 +49,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198394/xiaomi-mi-9-se-blue-18thangbh-600x600.jpg',
     price: 7000000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 6,
@@ -55,9 +60,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198167/xiaomi-redmi-7-black-1-600x600.jpg',
     price: 19500000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 7,
@@ -65,9 +71,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/199083/vivo-y91c-600x600.jpg',
     price: 14400000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 8,
@@ -75,9 +82,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/203347/realme-c2-16gb-new-blue-400x400.jpg',
     price: 14400000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 9,
@@ -85,9 +93,10 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/202028/oppo-a9-2020-green-1-400x400.jpg',
     price: 12400000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   },
   {
     id: 10,
@@ -95,8 +104,9 @@ export const productData = [
     image:
       'https://cdn.tgdd.vn/Products/Images/42/198986/samsung-galaxy-s10-plus-512gb-ceramic-black-400x400.jpg',
     price: 11400000,
-    description: 'Tặng thêm 1 năm bảo hành hãng',
+    description:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     detail:
-      'Theo nhà sản xuất trong ngày ra mắt Vsmart Active 1, họ có nói rằng đây chính là thiết bị lấy cảm hứng được thực hiện theo xu hướng của Châu Âu. Nhưng thực tế đã chứng minh rằng ngay chính thị trường toàn cầu cũng thấy sự quen thuộc trên thiết kế của Active 1 trên khá nhiều những mẫu smartphone ngày nay.'
+      'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
   }
 ]

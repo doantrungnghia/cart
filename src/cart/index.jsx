@@ -51,14 +51,13 @@ export default class Cart extends Component {
         cart: cart.filter(item => item.id !== id)
       },
       () => {
-        this.props.updateProductToCart(this.state.cart)
+        this.props.updateProductToCart(this.state.cart, id)
       }
     )
   }
 
   render() {
     const { cart } = this.state
-
     return (
       <React.Fragment>
         <section className='cart'>

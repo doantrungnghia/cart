@@ -1,8 +1,8 @@
 import React from 'react'
-import { productData } from '../data/index'
+import { productData } from '../../data/index'
 import { shallow } from 'enzyme'
-import { numberWithCommas } from '../functions/index'
-import ProductDetail from '../components/ProductDetail'
+import { numberWithCommas } from '../../functions/index'
+import ProductDetail from '../../components/ProductDetail'
 
 describe('Product-Detail', () => {
   const addProductToCart = jest.fn()

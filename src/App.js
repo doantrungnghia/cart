@@ -39,9 +39,11 @@ export default class App extends Component {
     }
   }
 
-  updateProductToCart = data => {
+  updateProductToCart = (data, idRemove) => {
+    const { productIds } = this.state
     this.setState({
       cart: data,
+      productIds: productIds.filter(item => item !== idRemove),
       modalStatus: false
     })
   }
@@ -53,7 +55,7 @@ export default class App extends Component {
   }
 
   render() {
-    const { data, cart, modalStatus } = this.state
+    const { data, cart, modalStatus, productIds } = this.state
     if (!data) return null
 
     return (
@@ -100,6 +102,7 @@ export default class App extends Component {
             render={() => (
               <Cart
                 cart={cart}
+                productIds={productIds}
                 updateProductToCart={this.updateProductToCart}
                 addProductToCart={this.addProductToCart}
               />
