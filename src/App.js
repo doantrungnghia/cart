@@ -109,7 +109,7 @@ export default class App extends Component {
             <Route
               key={`product-detail-${item.id}`}
               exact
-              path={'/' + item.id}
+              path={'/' + item.title}
               render={() => (
                 <ProductDetail
                   addProductToCart={this.addProductToCart}

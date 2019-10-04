@@ -25,7 +25,7 @@ export const Product = ({
         className ? className : `col-lg-3 col-md-4 col-sm-6 col-12`
       } product-item-wrapper`}
     >
-      <Link to={`/${id}`}>
+      <Link to={`/${title}`}>
         <div className='product-item'>
           <Card className='border-0'>
             <CardImg top width='100%' className='product-image' src={image} />
