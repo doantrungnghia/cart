@@ -15,7 +15,7 @@ export default class Cart extends Component {
   componentWillReceiveProps(props) {
     const { cart } = this.state
     const newCart = props.cart
-    if (cart !== props.cart) {
+    if (cart !== newCart) {
       this.setState({
         cart: newCart
       })
@@ -51,14 +51,13 @@ export default class Cart extends Component {
         cart: cart.filter(item => item.id !== id)
       },
       () => {
-        this.props.updateProductToCart(this.state.cart)
+        this.props.updateProductToCart(this.state.cart, id)
       }
     )
   }
 
   render() {
     const { cart } = this.state
-
     return (
       <React.Fragment>
         <section className='cart'>

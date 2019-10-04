@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, ModalBody } from 'reactstrap'
 
-export default class ModalAdeded extends React.Component {
+export default class ModalAdded extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
