@@ -9,7 +9,9 @@ describe('Cart Page', () => {
   const removeItemFunction = jest.fn()
   const setQuantityFunction = jest.fn()
   const updateProductToCart = jest.fn()
-  const cartPage = mount(<Cart updateProductToCart={updateProductToCart} />)
+  const cartPage = mount(
+    <Cart updateProductToCart={updateProductToCart} cart={[]} />
+  )
   const cartItem = shallow(
     <CartItem
       {...productData[0]}
@@ -24,6 +26,7 @@ describe('Cart Page', () => {
       cartItemRemoveBtn.simulate('click')
       expect(removeItemFunction).toHaveBeenCalled()
     })
+
     it('setQuantity is wrorking', () => {
       const cartItemSetQuantitySelect = cartItem.find(CartItemCount)
       cartItemSetQuantitySelect.props().setQuantity(2)

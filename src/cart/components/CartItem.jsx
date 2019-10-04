@@ -1,28 +1,18 @@
 import React from 'react'
 import { numberWithCommas } from '../../functions/index'
 
-const buildOptions = () => {
-  var arr = []
-  for (let i = 1; i <= 20; i++) {
-    arr.push(
-      <option key={i} value={i}>
-        {i}
-      </option>
-    )
-  }
-  return arr
-}
-
-export const CartItemCount = ({ value, setQuantity, id }) => {
+export const CartItemCount = ({ value = 0, setQuantity, id }) => {
   return (
-    <select
-      onChange={setQuantity}
-      className='select-count ml-4 bg-white'
-      defaultValue={value}
-      id={id}
-    >
-      {buildOptions()}
-    </select>
+    <div className='d-flex mt-2'>
+      <i>Quantity: </i>
+      <input
+        type='number'
+        className='count-quantity'
+        defaultValue={value}
+        id={id}
+        onChange={setQuantity}
+      />
+    </div>
   )
 }
 
@@ -37,7 +27,7 @@ export const CartItem = ({
   setQuantity
 }) => {
   return (
-    <div className='row cart-item'>
+    <div className='row cart-item text-md-left text-center'>
       <div className='col-lg-3 col-12'>
         <img className='img-fluid' src={image} alt='' />
       </div>
