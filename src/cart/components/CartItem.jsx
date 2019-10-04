@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { numberWithCommas } from '../../functions/index'
 
 export const CartItemCount = ({ value = 0, setQuantity, id }) => {
