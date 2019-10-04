@@ -15,7 +15,7 @@ export default class Cart extends Component {
   componentWillReceiveProps(props) {
     const { cart } = this.state
     const newCart = props.cart
-    if (cart !== props.cart) {
+    if (cart !== newCart) {
       this.setState({
         cart: newCart
       })
