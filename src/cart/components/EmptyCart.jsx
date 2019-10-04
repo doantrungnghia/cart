@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function CartNone() {
+export default function EmptyCart() {
   return (
     <div className='container'>
       <div className='cart-none text-center'>

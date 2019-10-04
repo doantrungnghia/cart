@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { productData } from './data/index'
 import BannerSlider from './components/BannerSlider'
 import ProductDetail from './components/ProductDetail'
-import ModalAdeded from './components/ModalAdded'
+import ModalAdded from './components/ModalAdded'
 
 export default class App extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ export default class App extends Component {
     const { productIds } = this.state
     this.setState({
       cart: data,
-      productIds: productIds.filter(item => item !== idRemove),
+      productIds: productIds.filter(productId => productId !== idRemove),
       modalStatus: false
     })
   }
@@ -60,7 +60,7 @@ export default class App extends Component {
 
     return (
       <Router>
-        <ModalAdeded modalStatus={modalStatus} />
+        <ModalAdded modalStatus={modalStatus} />
         <Navbar dark expand='md'>
           <div className='container'>
             <Link to='/'>
