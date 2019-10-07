@@ -9,16 +9,22 @@ import {
 } from 'reactstrap'
 import { numberWithCommas } from '../functions/index'
 import { Link } from 'react-router-dom'
+import { useAlert } from 'react-alert'
 
-export const Product = ({
+export default function Product({
   id,
   title,
+  image,
   price,
   description,
-  image,
-  addProductToCart,
-  className
-}) => {
+  className,
+  addProductToCart
+}) {
+  const alert = useAlert()
+  function addProductToCartAndAlert() {
+    alert.success('You added sucessfully')
+    addProductToCart()
+  }
   return (
     <div
       className={`${
@@ -41,16 +47,7 @@ export const Product = ({
       </Link>
       <button
         className='btn-add-cart position-absolute'
-        onClick={() =>
-          addProductToCart({
-            id,
-            title,
-            price,
-            description,
-            image,
-            quantity: 1
-          })
-        }
+        onClick={addProductToCartAndAlert}
       >
         Add To Cart
       </button>
