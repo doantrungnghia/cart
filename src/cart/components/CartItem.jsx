@@ -9,7 +9,7 @@ export const CartItemCount = ({ quantity, setQuantityCartItem, id }) => {
   }
 
   const getValue = e => {
-    setQuantityCartItem(id, e.target.value)
+    setQuantityCartItem(id, Number(e.target.value))
   }
 
   return (
