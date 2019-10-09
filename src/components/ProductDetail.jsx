@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { numberWithCommas } from '../functions/index'
-import ProductSlider from './ProductSlider'
 import { productData } from '../data'
+import ProductList from './ProductList'
 
 export default class ProductDetail extends Component {
   render() {
     const {
-      id,
       image,
       title,
       price,
@@ -34,16 +33,7 @@ export default class ProductDetail extends Component {
                 <div className='product-detail-text mt-3'>{detail}</div>
                 <button
                   className='btn-add-cart mt-3'
-                  onClick={() =>
-                    addProductToCart({
-                      id,
-                      title,
-                      price,
-                      description,
-                      image,
-                      quantity: 1
-                    })
-                  }
+                  onClick={addProductToCart}
                 >
                   Add To Cart
                 </button>
@@ -51,10 +41,7 @@ export default class ProductDetail extends Component {
             </div>
           </div>
         </div>
-        <ProductSlider
-          {...productData}
-          addProductToCart={this.props.addProductToCart}
-        />
+        <ProductList products={productData} slider />
       </React.Fragment>
     )
   }

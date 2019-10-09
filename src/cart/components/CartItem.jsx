@@ -1,7 +1,17 @@
 import React from 'react'
 import { numberWithCommas } from '../../functions/index'
 
-export const CartItemCount = ({ quantity, setQuantity, id }) => {
+export const CartItemCount = ({ quantity, setQuantityCartItem, id }) => {
+  const preventSpecialCharacters = e => {
+    if (e.keyCode === 190) {
+      e.preventDefault(0)
+    }
+  }
+
+  const getValue = e => {
+    setQuantityCartItem(id, Number(e.target.value))
+  }
+
   return (
     <div className='d-flex mt-2'>
       <i>Quantity: </i>
@@ -10,7 +20,9 @@ export const CartItemCount = ({ quantity, setQuantity, id }) => {
         className='count-quantity'
         value={quantity}
         id={id}
-        onChange={setQuantity}
+        onKeyDown={preventSpecialCharacters}
+        onChange={getValue}
+        min={1}
       />
     </div>
   )
@@ -23,8 +35,8 @@ export const CartItem = ({
   description,
   image,
   quantity,
-  removeItem,
-  setQuantity
+  setQuantityCartItem,
+  removeCartItem
 }) => {
   return (
     <div className='row cart-item text-md-left text-center'>
@@ -34,12 +46,13 @@ export const CartItem = ({
       <div className='col-lg-9 col-12 pt-3'>
         <h4 className='product-title'>{title}</h4>
         <span className='product-price'>{numberWithCommas(price)}</span>
-        <CartItemCount id={id} setQuantity={setQuantity} quantity={quantity} />
+        <CartItemCount
+          id={id}
+          setQuantityCartItem={setQuantityCartItem}
+          quantity={quantity}
+        />
         <p className='product-des'>{description}</p>
-        <button
-          onClick={() => removeItem(id)}
-          className='cart-remove text-center'
-        >
+        <button onClick={removeCartItem} className='cart-remove text-center'>
           Remove this item
         </button>
       </div>
