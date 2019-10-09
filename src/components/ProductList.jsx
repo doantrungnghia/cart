@@ -23,17 +23,18 @@ const responsive = {
   }
 }
 
-function ProductList({ products, slider, addProductToCart }) {
+function ProductList({ products, slider, dispatch }) {
   const listProducts = products.map(item => {
     return (
       <Product
         key={`product-${item.id}`}
         {...item}
         className={slider ? 'h-100' : ''}
-        addProductToCart={() => addProductToCart({ ...item })}
+        addProductToCart={() => dispatch(addProductToCart({ ...item }))}
       />
     )
   })
+
   return slider ? (
     <div className='container mb-4 pb-4'>
       <Carousel responsive={responsive} className='product-slider'>
@@ -45,13 +46,4 @@ function ProductList({ products, slider, addProductToCart }) {
   )
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addProductToCart: product => dispatch(addProductToCart(product))
-  }
-}
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(ProductList)
+export default connect()(ProductList)

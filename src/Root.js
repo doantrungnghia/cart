@@ -3,8 +3,8 @@ import Home from './home/index'
 import Cart from './cart/index'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import ProductDetail from './components/ProductDetail'
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
+import ProductDetailList from './components/ProductDetailList'
 
 const AlertTemplate = () => (
   <div className='bg-white p-4 rounded'>
@@ -34,16 +34,7 @@ export const Root = ({ store }) => (
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/cart' component={Cart} />
-          {store.getState().products.map(item => {
-            return (
-              <Route
-                path={`/${item.title}`}
-                key={`product-detail-router-${item.id}`}
-              >
-                <ProductDetail key={`product-detail-${item.id}`} {...item} />
-              </Route>
-            )
-          })}
+          <ProductDetailList />
         </Switch>
       </Router>
     </Provider>

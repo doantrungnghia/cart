@@ -1,28 +1,21 @@
 import React, { Component } from 'react'
 import { numberWithCommas } from '../functions/index'
 import { productData } from '../data'
-import { addProductToCart } from '../redux/actions/index'
-import { connect } from 'react-redux'
-import Header from './Header'
-import BannerSlider from './BannerSlider'
 import ProductList from './ProductList'
 
-class ProductDetail extends Component {
+export default class ProductDetail extends Component {
   render() {
     const {
-      id,
       image,
       title,
       price,
       description,
       detail,
-      addProductToCartFunction
+      addProductToCart
     } = this.props
 
     return (
       <React.Fragment>
-        <Header />
-        <BannerSlider />
         <div className='container product-detail-wrapper'>
           <div className='product-detail bg-white'>
             <div className='row'>
@@ -40,15 +33,7 @@ class ProductDetail extends Component {
                 <div className='product-detail-text mt-3'>{detail}</div>
                 <button
                   className='btn-add-cart mt-3'
-                  onClick={() =>
-                    addProductToCartFunction({
-                      id,
-                      title,
-                      price,
-                      description,
-                      image
-                    })
-                  }
+                  onClick={addProductToCart}
                 >
                   Add To Cart
                 </button>
@@ -61,12 +46,3 @@ class ProductDetail extends Component {
     )
   }
 }
-
-const mapDispatchToProps = dispatch => ({
-  addProductToCartFunction: product => dispatch(addProductToCart(product))
-})
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(ProductDetail)
