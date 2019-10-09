@@ -13,3 +13,17 @@ export const setQuantityCartItem = (idSet, quantity) => ({
   idSet,
   quantity
 })
+
+export const requestProducts = () => ({
+  type: 'REQUEST_PRODUCTS'
+})
+
+export const receiveProducts = products => ({
+  type: 'RECEIVE_PRODUCTS',
+  products
+})
+
+export const rejectProducts = err => ({
+  type: 'REJECT_PRODUCTS',
+  error: err
+})

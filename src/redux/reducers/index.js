@@ -1,8 +1,13 @@
 import { combineReducers } from 'redux'
-import { productData } from '../../data/index'
 
-const products = (state = productData, action) => {
+const products = (state = [], action) => {
   switch (action.type) {
+    case 'REQUEST_PRODUCTS':
+      return state
+    case 'RECEIVE_PRODUCTS':
+      return action.products
+    case 'REJECT_PRODUCTS':
+      return state
     default:
       return state
   }
