@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import { numberWithCommas } from '../functions/index'
-import ProductSlider from './ProductSlider'
 import { productData } from '../data'
+import { addProductToCart } from '../redux/actions/index'
+import { connect } from 'react-redux'
+import Header from './Header'
+import BannerSlider from './BannerSlider'
+import ProductList from './ProductList'
 
-export default class ProductDetail extends Component {
+class ProductDetail extends Component {
   render() {
     const {
       id,
@@ -12,11 +16,13 @@ export default class ProductDetail extends Component {
       price,
       description,
       detail,
-      addProductToCart
+      addProductToCartFunction
     } = this.props
 
     return (
       <React.Fragment>
+        <Header />
+        <BannerSlider />
         <div className='container product-detail-wrapper'>
           <div className='product-detail bg-white'>
             <div className='row'>
@@ -35,13 +41,12 @@ export default class ProductDetail extends Component {
                 <button
                   className='btn-add-cart mt-3'
                   onClick={() =>
-                    addProductToCart({
+                    addProductToCartFunction({
                       id,
                       title,
                       price,
                       description,
-                      image,
-                      quantity: 1
+                      image
                     })
                   }
                 >
@@ -51,11 +56,17 @@ export default class ProductDetail extends Component {
             </div>
           </div>
         </div>
-        <ProductSlider
-          {...productData}
-          addProductToCart={this.props.addProductToCart}
-        />
+        <ProductList products={productData} slider />
       </React.Fragment>
     )
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  addProductToCartFunction: product => dispatch(addProductToCart(product))
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ProductDetail)

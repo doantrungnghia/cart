@@ -4,9 +4,14 @@ import * as serviceWorker from './serviceWorker'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'react-multi-carousel/lib/styles.css'
 import './index.css'
-import App from './App'
+import { createStore } from 'redux'
+import { Root } from './Root'
+import rootReducer from './redux/reducers/index'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const store = createStore(rootReducer)
+store.subscribe(() => console.log(store.getState()))
+
+ReactDOM.render(<Root store={store} />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
